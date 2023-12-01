@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+  left: 100px;
+
+}
+.content h1{
+  margin-bottom: 5px;
+  font-size: 120px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Monument';
+  color: #ff77f4;
+  cursor: crosshair;
+}
+
+.digitS-cursor-follow{
+  position: absolute;
+  background: red;
+  width: 60px;
+  height: 60px;
+  z-index: 5;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(5px,5px);
+  border-radius: 9999px;
+}
+.secondSec-cursor-follow{
+  position: absolute;
+  background: url(/public/img/profileYK.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  z-index: 5;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(5px,5px);
+  border-radius: 9999px;
 }

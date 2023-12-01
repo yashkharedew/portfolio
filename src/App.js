@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { theme } from './theme/index';
+import { ChakraProvider } from '@chakra-ui/react';
+import Index from './pages/digitalS/Index';
+import MainSec from './pages/creativeDesign/MainSec';
+import CdSec from './pages/creativeDesign/CdSec';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ChakraProvider theme={theme}>
+   <Index/>
+   <CdSec/>
+   <MainSec/>
+    </ChakraProvider>
+    </>
   );
 }
 
