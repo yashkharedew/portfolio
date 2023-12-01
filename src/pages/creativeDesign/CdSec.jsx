@@ -7,7 +7,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -347,6 +347,7 @@ function CdSec() {
       </Box>
       <Box>
         <Container variant={"outerContainer"} mt="6">
+          {/* <MouseFollower /> */}
           <Box bg="#b7b7b7" w="full" h="1" borderRadius={"lg"}>
             <Box pt="13">
               <SimpleGrid columns={2} spacing={10}>

@@ -25,7 +25,7 @@ function MainSec() {
         });
       },
     });
-    document.addEventListener("mousemove", function (e) {
+    window.addEventListener("mousemove", function (e) {
       mouseX = e.pageX;
       mouseY = e.pageY;
     });
@@ -33,6 +33,7 @@ function MainSec() {
     tl2.from(
       cdSecursor,
       {
+        container: ".mainSec",
         duration: "unset",
         opacity: 1,
       },
@@ -41,7 +42,7 @@ function MainSec() {
   });
   return (
     <>
-      <Box minH="400vh" bg="black">
+      <Box minH="400vh" bg="black" className="mainSec">
         <Box
           className="secondSec-cursor-follow"
           ref={(el) => (cdSecursor = el)}
