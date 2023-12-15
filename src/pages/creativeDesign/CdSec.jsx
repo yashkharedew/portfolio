@@ -356,13 +356,22 @@ function CdSec() {
                     <CdBottom />
                   </Box>
                   <Box display={"inline-block"} flex="1" textAlign={"end"}>
-                    <Text variant={"bodyText3"} textTransform="capitalize">
+                    <Text
+                      variant={"bodyText3"}
+                      textTransform="capitalize"
+                      color={"primary.white"}
+                    >
                       Creative Design
                     </Text>
                   </Box>
                 </Flex>
                 <Box>
-                  <Text variant={"bodyText1"} fs="24px" lh="1.26">
+                  <Text
+                    variant={"bodyText1"}
+                    fs="24px"
+                    lh="1.26"
+                    fontFamily={"lato"}
+                  >
                     We don't do cookie-cutter solutions. Our user-centered
                     design encourages productivity and boosts revenue.
                   </Text>

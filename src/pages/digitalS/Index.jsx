@@ -11,13 +11,52 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 // import ReactPlayer from 'react-player'
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Index() {
   const myRef = useRef();
+
+  let tl = gsap.timeline();
+  let tl2 = gsap.timeline();
+  let digitalSecursor = useRef(null);
+  let posX = 0;
+  let posY = 0;
+  let mouseX = 0;
+  let mouseY = 0;
+
+  useEffect(() => {
+    tl.to({}, 0.016, {
+      repeat: -1,
+      onRepeat: function () {
+        posX += (mouseX - posX) / 10;
+        posY += (mouseY - posY) / 10;
+        tl.set(digitalSecursor, {
+          css: {
+            left: posX - 50,
+            top: posY - 50,
+          },
+        });
+      },
+    });
+    const div = myRef.current;
+    div.addEventListener("mousemove", function (e) {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+    });
+
+    tl2.from(
+      digitalSecursor,
+      {
+        container: ".mainSec",
+        duration: "unset",
+        opacity: 1,
+      },
+      "-=1"
+    );
+  });
 
   useLayoutEffect(() => {
     const viewport = window.innerWidth;
@@ -98,6 +137,10 @@ function Index() {
           },
         }}
       >
+        <Box
+          className="digitS-cursor-follow"
+          ref={(el) => (digitalSecursor = el)}
+        ></Box>
         <Container
           variant={"outerContainer"}
           className="IntroBox"
@@ -138,6 +181,7 @@ function Index() {
               as="h1"
               variant="h1"
               fontSize={{ base: "3rem", lg: "8rem" }}
+              className="focus-in-expand"
             >
               We
             </Heading>
@@ -169,7 +213,7 @@ function Index() {
               fontSize={{ base: "3rem", lg: "8rem" }}
               mb={{ base: "4", lg: "unset" }}
             >
-              <Text as="span" sx={{}}>
+              <Text as="span" sx={{}} className="text-blur-out">
                 _
               </Text>
               SOLUTIONS

@@ -11,6 +11,8 @@ function MainSec() {
   let posY = 0;
   let mouseX = 0;
   let mouseY = 0;
+  // create element ref
+  const innerRef = useRef(null);
   useEffect(() => {
     tl.to({}, 0.016, {
       repeat: -1,
@@ -25,7 +27,8 @@ function MainSec() {
         });
       },
     });
-    window.addEventListener("mousemove", function (e) {
+    const div = innerRef.current;
+    div.addEventListener("mousemove", function (e) {
       mouseX = e.pageX;
       mouseY = e.pageY;
     });
@@ -42,7 +45,13 @@ function MainSec() {
   });
   return (
     <>
-      <Box minH="400vh" bg="black" className="mainSec">
+      <Box
+        minH="400vh"
+        bg="black"
+        className="mainSec"
+        data-speed="0.5"
+        ref={innerRef}
+      >
         <Box
           className="secondSec-cursor-follow"
           ref={(el) => (cdSecursor = el)}
