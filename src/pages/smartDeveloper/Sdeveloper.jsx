@@ -173,7 +173,7 @@ function Sdeveloper() {
               ></video>
             </AspectRatio>
           </Box> */}
-          <Box minH={"600px"} d="inline-block">
+          <Box minH={"500px"} d="inline-block">
             <Box
               className="sd-cursor-follow whiteCursorFollow "
               display={"inlineBlock"}
