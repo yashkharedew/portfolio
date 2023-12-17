@@ -22,7 +22,7 @@ function BrandVideoSec() {
       >
         <Box
           w={"full"}
-          h="250px"
+          h="full"
           borderRadius={"full"}
           m="auto"
           position={"unset"}
