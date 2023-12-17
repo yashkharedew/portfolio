@@ -168,7 +168,7 @@ function Index() {
               Yash Khare
             </Heading>
             <Box w="40px" h="40px" borderRadius={"full"} overflow="hidden">
-              <Image src="/img/profileYK.jpeg" alt="profile" />
+              <Image src="img/profileYK.jpeg" alt="profile" />
             </Box>
           </HStack>
           <Stack
