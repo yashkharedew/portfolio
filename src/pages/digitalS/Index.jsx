@@ -190,6 +190,7 @@ function Index() {
               variant="primaryStyle"
               fontSize={{ base: "3rem !important", lg: "6rem !important" }}
               letterSpacing="8px"
+              w={{ base: "250px", md: "450px", lg: "550px" }}
               h={{ base: "auto", lg: "8rem" }}
               fontFamily="nanum !important"
             >

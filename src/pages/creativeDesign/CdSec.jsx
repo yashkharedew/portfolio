@@ -325,7 +325,7 @@ function CdSec() {
           {/* <MouseFollower /> */}
           <Box bg="#b7b7b7" w="full" h="1" borderRadius={"lg"}>
             <Box pt="13">
-              <SimpleGrid columns={2} spacing={10}>
+              <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={10}>
                 <Flex>
                   <Box w="40px">
                     <CdBottom />
