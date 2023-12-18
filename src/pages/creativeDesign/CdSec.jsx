@@ -7,60 +7,62 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import { React, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import MouseFollower from "mouse-follower";
-import gsap from "gsap";
-
 import { Navigation, Pagination, Grid, Thumbs } from "swiper/modules";
 import CdBottom from "./CdBottom";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-// MouseFollower.registerGSAP(gsap);
-
-// const cursor = new MouseFollower({
-//   el: null,
-//   container: document.body,
-//   className: "mf-cursor",
-//   innerClassName: "mf-cursor-inner",
-//   textClassName: "mf-cursor-text",
-//   mediaClassName: "mf-cursor-media",
-//   mediaBoxClassName: "mf-cursor-media-box",
-//   iconSvgClassName: "mf-svgsprite",
-//   iconSvgNamePrefix: "-",
-//   iconSvgSrc: "",
-//   dataAttr: "cursor",
-//   hiddenState: "-hidden",
-//   textState: "-text",
-//   iconState: "-icon",
-//   activeState: "-active",
-//   mediaState: "-media",
-//   stateDetection: {
-//     "-pointer": "a,button",
-//     "-hidden": "iframe",
-//   },
-//   visible: true,
-//   visibleOnState: false,
-//   speed: 0.55,
-//   ease: "expo.out",
-//   overwrite: true,
-//   skewing: 0,
-//   skewingText: 2,
-//   skewingIcon: 2,
-//   skewingMedia: 2,
-//   skewingDelta: 0.001,
-//   skewingDeltaMax: 0.15,
-//   stickDelta: 0.15,
-//   showTimeout: 20,
-//   hideOnLeave: true,
-//   hideTimeout: 300,
-//   hideMediaTimeout: 300,
-// });
 function CdSec() {
+  const myRef = useRef();
+
+  let tl = gsap.timeline();
+  let tl2 = gsap.timeline();
+  let cdCursor = useRef(null);
+  let posX = 0;
+  let posY = 0;
+  let mouseX = 0;
+  let mouseY = 0;
+
+  useEffect(() => {
+    tl.to({}, 0.016, {
+      repeat: -1,
+      onRepeat: function () {
+        posX += (mouseX - posX) / 10;
+        posY += (mouseY - posY) / 10;
+        tl.set(cdCursor, {
+          css: {
+            left: posX - 50,
+            top: posY - 50,
+          },
+        });
+      },
+    });
+    const div = myRef.current;
+    div.addEventListener("mousemove", function (e) {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+    });
+
+    tl2.from(
+      cdCursor,
+      {
+        container: ".mainSec",
+        duration: "unset",
+        opacity: 1,
+      },
+      "-=1"
+    );
+  });
+
+  //  Swiper Slider Autoplay
+
   const sliderSettings = {
     0: {
       slidesPerView: 1.25,
@@ -100,35 +102,8 @@ function CdSec() {
   };
 
   return (
-    <Box bg="white" paddingY="10rem" className="CdSec">
-      {/* <AnimatedCursor
-                      innerSize={8}
-                      outerSize={65}
-                      innerScale={1}
-                      outerScale={1.7}
-                      outerAlpha={0}
-                      outerStyle={{
-                        backgroundImage: "url(/img/profileYK.jpeg) no-repeat",
-                        backgroundSize: "full",
-                      }}
-                      innerStyle={{
-                        backgroundColor: "#ffffff",
-                      }}
-                      showSystemCursor="true"
-                      clickables={[
-                        "a",
-                        'input[type="text"]',
-                        'input[type="email"]',
-                        'input[type="number"]',
-                        'input[type="submit"]',
-                        'input[type="image"]',
-                        "label[for]",
-                        "select",
-                        "textarea",
-                        "button",
-                        ".link",
-                      ]}
-                    /> */}
+    <Box bg="white" paddingY="10rem" className="CdSec" ref={myRef}>
+      <Box className="cdCursorBlack" ref={(el) => (cdCursor = el)}></Box>
       <Box
         cursor={"pointer"}
         h={"auto"}
