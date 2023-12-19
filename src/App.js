@@ -7,6 +7,7 @@ import CdSec from "./pages/creativeDesign/CdSec";
 import MainSec from "./pages/creativeDesign/MainSec";
 import Sdeveloper from "./pages/smartDeveloper/Sdeveloper";
 import BrandVideoSec from "./pages/brandIdentities/BrandVideoSec";
+import ArtDirectionSec from "./pages/artDirection/ArtDirectionSec";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <CdSec />
         <Sdeveloper />
         <BrandVideoSec />
+        <ArtDirectionSec />
       </ChakraProvider>
     </>
   );
