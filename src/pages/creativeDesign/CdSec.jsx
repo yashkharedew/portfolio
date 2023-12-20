@@ -38,8 +38,8 @@ function CdSec() {
         posY += (mouseY - posY) / 10;
         tl.set(cdCursor, {
           css: {
-            left: posX - 50,
-            top: posY - 50,
+            left: posX - 15,
+            top: posY - 15,
           },
         });
       },

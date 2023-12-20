@@ -35,8 +35,8 @@ function Index() {
         posY += (mouseY - posY) / 10;
         tl.set(digitalSecursor, {
           css: {
-            left: posX - 50,
-            top: posY - 50,
+            left: posX - 15,
+            top: posY - 15,
           },
         });
       },
