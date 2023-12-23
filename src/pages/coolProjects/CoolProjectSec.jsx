@@ -11,17 +11,23 @@ function CoolProjectSec() {
       >
         <Box mb="space160">
           <Box mb="2">
-            <Text variant={"bodyTextSd"} d="flex">
+            <Text variant={"bodyTextSd"} display="flex">
               Co
               <Box
                 className="coolRotate"
                 Box
                 w="120px"
                 h={"120px"}
-                d="inline-block"
+                rotate-center
               >
-                <Image src="img/coolRotate.png" w="full" h="full"></Image>
+                <Image
+                  src="img/coolRotate.png"
+                  w="full"
+                  h="full"
+                  mixBlendMode={"lighten"}
+                ></Image>
               </Box>
+              <Text variant={"bodyTextSd"}>LEST</Text>
             </Text>
           </Box>
           <Box>
