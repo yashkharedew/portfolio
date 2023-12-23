@@ -18,13 +18,9 @@ function CoolProjectSec() {
                 Box
                 w="110px"
                 h={"110px"}
+                mixBlendMode={"lighten"}
               >
-                <Image
-                  src="img/coolRotate.png"
-                  w="full"
-                  h="full"
-                  mixBlendMode={"lighten"}
-                ></Image>
+                <Image src="img/coolRotate.png" w="full" h="full"></Image>
               </Box>
               <Text variant={"bodyTextSd"}>LEST</Text>
             </Text>
