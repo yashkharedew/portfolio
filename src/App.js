@@ -8,6 +8,8 @@ import MainSec from "./pages/creativeDesign/MainSec";
 import Sdeveloper from "./pages/smartDeveloper/Sdeveloper";
 import BrandVideoSec from "./pages/brandIdentities/BrandVideoSec";
 import ArtDirectionSec from "./pages/artDirection/ArtDirectionSec";
+import CoolProjects from "./pages/coolProjects/CoolProjectSec";
+import CoolProjectSec from "./pages/coolProjects/CoolProjectSec";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Sdeveloper />
         <BrandVideoSec />
         <ArtDirectionSec />
+        <CoolProjectSec />
       </ChakraProvider>
     </>
   );
