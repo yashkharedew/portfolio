@@ -12,7 +12,7 @@ function CoolProjectSec() {
         <Box mb="space160">
           <Box mb="2">
             <Text variant={"bodyTextSd"} display="flex" alignItems={"center"}>
-              Co
+              CO
               <Box
                 className="coolRotate rotate-center"
                 Box
@@ -25,7 +25,12 @@ function CoolProjectSec() {
               <Text variant={"bodyTextSd"}>LEST</Text>
             </Text>
           </Box>
-          <Box display={"flex"} alignItems={"center"} gap="4">
+          <Box
+            display={"flex"}
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems={{ base: "start", md: "center" }}
+            gap="4"
+          >
             <Box>
               <AspectRatio
                 className="video"

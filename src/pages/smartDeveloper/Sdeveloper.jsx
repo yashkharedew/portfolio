@@ -234,12 +234,17 @@ function Sdeveloper() {
                   ></video>
                 </Box>
               </Box>
-              <Box flex={{ sm: "unset", md: "1" }} maxWidth="814px">
-                <Flex alignItems={"flex-start"} gap="4" mb="6">
-                  <Box flex="1" textAlign={"end"}>
+              <Box flex={{ sm: "unset", md: "1" }}>
+                <Flex
+                  flexDirection={{ base: "column", md: "row" }}
+                  alignItems={"flex-start"}
+                  gap="4"
+                  mb="6"
+                >
+                  <Box flex="1" textAlign={{ base: "start", md: "end" }}>
                     <Text
                       variant={"bodyText3"}
-                      fontSize="20px"
+                      fontSize="36px"
                       color="primary.white"
                       fontFamily={"nanum !!important"}
                       fontWeight="100"
@@ -264,7 +269,11 @@ function Sdeveloper() {
                     </Box>
                   </Box>
                 </Flex>
-                <Flex alignItems={"flex-start"} gap="4">
+                <Flex
+                  flexDirection={{ base: "column", md: "row" }}
+                  alignItems={"flex-start"}
+                  gap="4"
+                >
                   <Box flex="1" textAlign={"end"}>
                     <Text
                       variant={"bodyText3"}

@@ -296,7 +296,7 @@ export const theme = extendTheme({
       letterSpacings: "wider",
     },
     bodyTextSd: {
-      fontSize: { base: "24px", md: "28px", lg: "fs125" },
+      fontSize: { base: "55px", md: "70px", lg: "fs125" },
       fontWeight: ["normal"],
       lineHeight: ["1.75"],
       color: "primary.white",
@@ -468,7 +468,7 @@ export const theme = extendTheme({
           fontFamily: "Inter",
         },
         bodyTextSd: {
-          fontSize: { base: "24px", md: "28px", lg: "125px" },
+          fontSize: { base: "55px", md: "70px", lg: "125px" },
           fontWeight: ["normal"],
           lineHeight: ["1.2"],
           color: "primary.white",

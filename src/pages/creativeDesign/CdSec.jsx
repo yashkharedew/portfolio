@@ -212,7 +212,7 @@ function CdSec() {
             <Heading
               as="h1"
               variant="h1"
-              fontSize={{ base: "1rem", lg: "6rem" }}
+              fontSize={{ base: "3rem", lg: "6rem" }}
               fontFamily="rubik !important"
               textAlign={{ base: "unset", lg: "start" }}
               textTransform="uppercase"
@@ -244,7 +244,7 @@ function CdSec() {
             <Heading
               as="h1"
               variant="h1"
-              fontSize={{ base: "1rem", lg: "6rem" }}
+              fontSize={{ base: "3rem", lg: "6rem" }}
               fontFamily="rubik !important"
               textAlign={{ base: "unset", lg: "end" }}
               textTransform="uppercase"
@@ -277,7 +277,7 @@ function CdSec() {
             <Heading
               as="h1"
               variant="h1"
-              fontSize={{ base: "1rem", lg: "6rem" }}
+              fontSize={{ base: "3rem", lg: "6rem" }}
               fontFamily="rubik !important"
               textAlign={{ base: "unset", lg: "end" }}
               textTransform="uppercase"
@@ -309,7 +309,7 @@ function CdSec() {
             <Heading
               as="h1"
               variant="h1"
-              fontSize={{ base: "1rem", lg: "6rem" }}
+              fontSize={{ base: "3rem", lg: "6rem" }}
               fontFamily="rubik !important"
               textAlign={{ base: "unset", lg: "end" }}
               textTransform="uppercase"
