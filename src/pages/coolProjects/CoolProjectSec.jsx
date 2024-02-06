@@ -60,6 +60,36 @@ function CoolProjectSec() {
           </Box>
         </Box>
       </Container>
+      <Box mx={"4"}>
+        <Box position={"relative"}>
+          <AspectRatio
+            className="video"
+            w={"full"}
+            h="auto"
+            ratio={16 / 7}
+            overflow={"hidden"}
+            borderRadius={"32px"}
+          >
+            <video
+              data-src="https://cdn.cuberto.com/cb/hello/showcase/qvino.mp4"
+              autoPlay
+              playsinline
+              loop
+              muted
+              src="https://cdn.cuberto.com/cb/hello/showcase/qvino.mp4"
+            ></video>
+          </AspectRatio>
+          <Box position={"absolute"} top={"25%"} left={"14%"}>
+            <Text
+              variant={"bodyTextSd"}
+              textTransform={"uppercase"}
+              fontWeight={"bold"}
+            >
+              View Case
+            </Text>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 }
